@@ -58,7 +58,7 @@ public class CharacterMovement : MonoBehaviour
     public bool IsGrounded(){
         float extraHeightText = .01f;
         RaycastHit2D raycastHit = Physics2D.Raycast(ground.bounds.center, Vector2.down, ground.bounds.extents.y, _groundLayerMask);
-        raycastHit = Physics2D.OverlapBox()
+        Color rayColor;
         if(raycastHit.collider != null){
             rayColor = Color.green;
         } else {
