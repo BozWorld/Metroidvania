@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 16667d0d9e0e127429c099f570700824
+guid: 5b0c70ca3564a94469e40efe42436676
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IdleSpriteSheet_0
+      name: Walk-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 18
-        width: 20
-        height: 18
+        y: 19
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 889fd5cc4defdd44b840a6e8030efb81
-      internalID: 106680171
+      spriteID: f41d543f19f5a2a43bc86e968a424a2d
+      internalID: 718317997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_1
+      name: Walk-Sheet_1
       rect:
         serializedVersion: 2
         x: 20
-        y: 18
-        width: 20
-        height: 18
+        y: 19
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 505d9b58d8be0cc45980416c23ab0352
-      internalID: -1686167801
+      spriteID: 35cdc40cc5906a949ac86b925e712cd7
+      internalID: 2050791403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_2
+      name: Walk-Sheet_2
       rect:
         serializedVersion: 2
         x: 40
-        y: 18
-        width: 20
-        height: 18
+        y: 19
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbf40e29cec1abe4ab50f0100682f42b
-      internalID: -245556494
+      spriteID: 744cdbf328000a241875d29687d586c5
+      internalID: -1950727540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_3
+      name: Walk-Sheet_3
       rect:
         serializedVersion: 2
         x: 60
-        y: 18
-        width: 20
-        height: 18
+        y: 19
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d22f5df4e4e1824dbd6355777c023f8
-      internalID: 125415403
+      spriteID: 6dfe4ee00c591d04089b4c451bce08b0
+      internalID: 1115333119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_4
+      name: Walk-Sheet_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 20
-        height: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e13ca6eccfdb0ab4699b082ad8cfdc51
-      internalID: -170215719
+      spriteID: a2f09d902a70d6e42ab2683c17aa9ddd
+      internalID: 2033248459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_5
+      name: Walk-Sheet_5
       rect:
         serializedVersion: 2
         x: 20
         y: 0
         width: 20
-        height: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e693b8f529f2a04eae50333190af7a5
-      internalID: 1169870246
+      spriteID: 689b7f4bd4826ee4b99594fb3fab84da
+      internalID: -2130345089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_6
+      name: Walk-Sheet_6
       rect:
         serializedVersion: 2
         x: 40
         y: 0
-        width: 20
-        height: 18
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5326e00a27e747d40a99d50c78d50ebc
-      internalID: -696521828
+      spriteID: c53e9f6ec45801649a8b83a5295e1c3a
+      internalID: -2053256409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpriteSheet_7
+      name: Walk-Sheet_7
       rect:
         serializedVersion: 2
         x: 60
         y: 0
-        width: 20
-        height: 18
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2101a1a3a5b9fd443b0da34f296c1791
-      internalID: 1389097333
+      spriteID: 4a8f052b01160e04ba15f8c565db1466
+      internalID: -1676671099
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IdleSpriteSheet_7: 1389097333
-      IdleSpriteSheet_6: -696521828
-      IdleSpriteSheet_2: -245556494
-      IdleSpriteSheet_3: 125415403
-      IdleSpriteSheet_5: 1169870246
-      IdleSpriteSheet_4: -170215719
-      IdleSpriteSheet_0: 106680171
-      IdleSpriteSheet_1: -1686167801
+      Walk-Sheet_5: -2130345089
+      Walk-Sheet_2: -1950727540
+      Walk-Sheet_4: 2033248459
+      Walk-Sheet_3: 1115333119
+      Walk-Sheet_6: -2053256409
+      Walk-Sheet_7: -1676671099
+      Walk-Sheet_1: 2050791403
+      Walk-Sheet_0: 718317997
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
