@@ -8,9 +8,15 @@ public class CharacterMovement : MonoBehaviour
     private PlayerInput _input;
     private Vector2 _rawMovement;
     private float m_JumpForce;
+    [Range(1,10)]
+    public float JumpVelocity;
     private bool _isJumping;
+    public float FallMultiplier = 2.5f;
+    public float lowJumpMultiplier = .2f;
+    private Rigidbody2D _rb;
 
     private void Awake(){
+        _rb = GetComponent<Rigidbody2D>();
         _input = new PlayerInput();
         _input.Player.Enable();
         _input.Player.Move.started += ctx => _rawMovement = ctx.ReadValue<Vector2> ();
@@ -21,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate () {
         Move();
+        FallModifier();
     }
 
     private void Move(){
@@ -28,8 +35,18 @@ public class CharacterMovement : MonoBehaviour
     }
 
     private void Jump(){
-
+        _isJumping = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.up * JumpVelocity;
     }
 
-    
+    private void FallModifier(){
+        if (_rb.velocity.y < 0){
+            _rb.velocity += Vector2.up * Physics2D.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (_rb.velocity.y > 0  && !_isJumping ){
+            _rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+    }
+
+
 }
