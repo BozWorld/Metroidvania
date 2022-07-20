@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -6,17 +8,25 @@ public class CharacterMovement : MonoBehaviour
     public float Speed;
     private PlayerInput _input;
     private Vector2 _rawMovement;
+    private SpriteRenderer playerSprite;
 
     [Range(1,10)]
     public float JumpVelocity;
     private bool _isJumping;
     public float FallMultiplier = 2.5f;
-    public float lowJumpMultiplier = .2f;
+    public float LowJumpMultiplier = .2f;
     private Rigidbody2D _rb;
-    public bool canJump;
-    public BoxCollider2D ground;
-
+    public bool CanJump;
+    public BoxCollider2D Ground;
+    private float _yVelocity;
     public Animator PlayerAnimator;
+
+    public float DashDistance;
+    public float DashSpeed;
+    public float DashinCoolDown;
+    private bool _canDash;
+    private bool _isDashing;
+    public TrailRenderer DashTrail;
 
     private void Awake()
     {
@@ -26,7 +36,8 @@ public class CharacterMovement : MonoBehaviour
         _input.Player.Move.started += ctx => _rawMovement = ctx.ReadValue<Vector2> ();
         _input.Player.Move.canceled += _ => _rawMovement = Vector2.zero;
         _input.Player.Jump.started += ctx => Jump();
-        _input.Player.Jump.canceled += ctx => _isJumping = false;        
+        _input.Player.Jump.canceled += ctx => _isJumping = false;
+        _input.Player.Dash.started += ctx => Dash();
     }
 
     private void FixedUpdate() 
@@ -53,12 +64,8 @@ public class CharacterMovement : MonoBehaviour
         if (IsGrounded())
         {
             _isJumping = true;
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * JumpVelocity;
-            PlayerAnimator.SetBool("isJumping", true);
-        }
-        else
-        {
-            PlayerAnimator.SetBool("isJumping", false);
+            _rb.velocity = Vector2.up * JumpVelocity;
+            
         }
     }
 
@@ -70,27 +77,54 @@ public class CharacterMovement : MonoBehaviour
         }
         else if (_rb.velocity.y > 0  && !_isJumping )
         {
-            _rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            _rb.velocity += Vector2.up * Physics2D.gravity.y * (LowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
 
     public bool IsGrounded()
     {
+        _yVelocity = Mathf.Clamp(_rb.velocity.y, -1, 1);
+        PlayerAnimator.SetFloat("yVelocity", _yVelocity);
+        
         float extraHeightText = .01f;
-        RaycastHit2D raycastHit = Physics2D.Raycast(ground.bounds.center, Vector2.down, ground.bounds.extents.y, _groundLayerMask);
+        RaycastHit2D raycastHit = Physics2D.Raycast(Ground.bounds.center, Vector2.down, Ground.bounds.extents.y, _groundLayerMask);
         Color rayColor;
         
         if(raycastHit.collider != null)
         {
             rayColor = Color.green;
+            PlayerAnimator.SetBool("isJumping", false);
         } 
         else 
         {
+            PlayerAnimator.SetBool("isJumping", true);
             rayColor = Color.red;
         }
         
-        Debug.DrawRay(ground.bounds.center, Vector2.down * (ground.bounds.extents.y + extraHeightText), rayColor);
+        Debug.DrawRay(Ground.bounds.center, Vector2.down * (Ground.bounds.extents.y + extraHeightText), rayColor);
         Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
     }
+
+    #region spell
+    
+    private IEnumerator Dash()
+    {
+        Debug.Log("Dashing");
+        float originaGravity = _rb.gravityScale;
+        _rb.gravityScale = 0;
+        _rb.velocity = new Vector2(transform.localScale.x * DashDistance, 0f);
+        DashTrail.emitting = true;
+        yield return new WaitForSeconds(DashSpeed);
+        DashTrail.emitting = false;
+        _rb.gravityScale = originaGravity;
+        _isDashing = false;
+        yield return new WaitForSeconds(DashinCoolDown);
+        _canDash = true;
+        // Vector2 dashPos = new Vector2(transform.position.x + DashDistance, transform.position.y);
+        // transform.position = Vector2.Lerp(transform.position,dashPos, DashSpeed);
+        //_rb.velocity = new Vector2(transform.position.x * DashDistance *, transform.position.y);
+    }
+
+    #endregion
 }
