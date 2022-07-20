@@ -14,9 +14,10 @@ public class CharacterMovement : MonoBehaviour
     public float lowJumpMultiplier = .2f;
     private Rigidbody2D _rb;
     public bool canJump;
-
     public BoxCollider2D ground;
-    
+
+    public Animator PlayerAnimator;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -37,7 +38,14 @@ public class CharacterMovement : MonoBehaviour
 
     private void Move()
     {
-        transform.position += (Vector3)_rawMovement * Speed * Time.deltaTime;
+        if(_rawMovement != Vector2.zero){
+            PlayerAnimator.SetBool("isMoving", true);
+            transform.position += (Vector3)_rawMovement * Speed * Time.deltaTime;
+        }
+        else
+        {
+            PlayerAnimator.SetBool("isMoving", false);
+        }
     }
 
     private void Jump()
@@ -46,6 +54,11 @@ public class CharacterMovement : MonoBehaviour
         {
             _isJumping = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * JumpVelocity;
+            PlayerAnimator.SetBool("isJumping", true);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("isJumping", false);
         }
     }
 
