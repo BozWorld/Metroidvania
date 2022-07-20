@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -18,7 +16,9 @@ public class CharacterMovement : MonoBehaviour
     public bool canJump;
 
     public BoxCollider2D ground;
-    private void Awake(){
+    
+    private void Awake()
+    {
         _rb = GetComponent<Rigidbody2D>();
         _input = new PlayerInput();
         _input.Player.Enable();
@@ -28,46 +28,56 @@ public class CharacterMovement : MonoBehaviour
         _input.Player.Jump.canceled += ctx => _isJumping = false;        
     }
 
-    private void FixedUpdate () {
+    private void FixedUpdate() 
+    {
         Move();
         FallModifier();
         IsGrounded();
     }
 
-    private void Move(){
+    private void Move()
+    {
         transform.position += (Vector3)_rawMovement * Speed * Time.deltaTime;
     }
 
-    private void Jump(){
-        if(IsGrounded())
-            {
-                _isJumping = true;
-                GetComponent<Rigidbody2D>().velocity = Vector2.up * JumpVelocity;
-            }
+    private void Jump()
+    {
+        if (IsGrounded())
+        {
+            _isJumping = true;
+            GetComponent<Rigidbody2D>().velocity = Vector2.up * JumpVelocity;
+        }
     }
 
-    private void FallModifier(){
-        if (_rb.velocity.y < 0){
+    private void FallModifier()
+    {
+        if (_rb.velocity.y < 0)
+        {
             _rb.velocity += Vector2.up * Physics2D.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
         }
-        else if (_rb.velocity.y > 0  && !_isJumping ){
+        else if (_rb.velocity.y > 0  && !_isJumping )
+        {
             _rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
 
-    public bool IsGrounded(){
+    public bool IsGrounded()
+    {
         float extraHeightText = .01f;
         RaycastHit2D raycastHit = Physics2D.Raycast(ground.bounds.center, Vector2.down, ground.bounds.extents.y, _groundLayerMask);
         Color rayColor;
-        if(raycastHit.collider != null){
+        
+        if(raycastHit.collider != null)
+        {
             rayColor = Color.green;
-        } else {
+        } 
+        else 
+        {
             rayColor = Color.red;
         }
+        
         Debug.DrawRay(ground.bounds.center, Vector2.down * (ground.bounds.extents.y + extraHeightText), rayColor);
         Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
     }
-
-
 }
