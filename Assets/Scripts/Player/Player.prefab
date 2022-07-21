@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7493964549293851813}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1090407219
 MonoBehaviour:
@@ -110,64 +110,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &1660017877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1660017878}
-  - component: {fileID: 1660017880}
-  m_Layer: 3
-  m_Name: groundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1660017878
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660017877}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7493964549293851813}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1660017880
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660017877}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.13399267, y: -0.52099985}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5637283, y: 0.384148}
-  m_EdgeRadius: 0
 --- !u!1 &1991616667
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +192,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.013965607
-        value: 0.11320114
+        time: 0
+        value: 0.50112844
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -307,7 +249,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
 --- !u!1 &7493964549293851802
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +262,6 @@ GameObject:
   - component: {fileID: 7493964549293851815}
   - component: {fileID: 7493964549293851814}
   - component: {fileID: 7493964549293851812}
-  - component: {fileID: 1164075620}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -342,7 +283,6 @@ Transform:
   m_Children:
   - {fileID: 7493964550839742949}
   - {fileID: 1991616668}
-  - {fileID: 1660017878}
   - {fileID: 1090407218}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -381,7 +321,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20831585, y: -0.0017511845}
+  m_Offset: {x: -0.1552887, y: -0.020124614}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -392,7 +332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0833263, y: 1.4165113}
+  m_Size: {x: 1.1893806, y: 1.4532582}
   m_EdgeRadius: 0
 --- !u!114 &7493964549293851812
 MonoBehaviour:
@@ -410,24 +350,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Speed: 6
-  JumpVelocity: 10
+  RawMovement: {x: 0, y: 0}
+  PlayerSprite: {fileID: 7493964550839742948}
+  JumpVelocity: 6
   FallMultiplier: 2.5
-  lowJumpMultiplier: 2
-  canJump: 0
-  ground: {fileID: 1660017880}
+  LowJumpMultiplier: 2
+  Rb: {fileID: 0}
+  Ground: {fileID: 7493964549293851814}
   PlayerAnimator: {fileID: 603140558}
---- !u!114 &1164075620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7493964549293851802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200f3c35a56e9304ea9b0bc4fc0323e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  DashDistance: 20
+  DashSpeed: 0.3
+  DashinCoolDown: 1
+  DashTrail: {fileID: 1991616669}
 --- !u!1 &7493964550839742938
 GameObject:
   m_ObjectHideFlags: 0
