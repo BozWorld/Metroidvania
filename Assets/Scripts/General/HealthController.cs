@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PawnHealth : MonoBehaviour, IDeath, IDamageable<float>
+public class HealthController : MonoBehaviour, IDeath, IDamageable<float>
 {
     public enum PawnType { player, enemy,boss};
     public PawnType Type;
