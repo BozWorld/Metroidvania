@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.031372547, b: 0.05137046, a: 1}
+  m_Color: {r: 1, g: 0.18431373, b: 0.020242691, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,9 +94,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8693940594797887306}
   - component: {fileID: 8693940594797887307}
+  - component: {fileID: 617605858}
   m_Layer: 0
   m_Name: hurtBox
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +143,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5744891, y: 1.2393705}
   m_EdgeRadius: 0
+--- !u!114 &617605858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8693940594797887305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2ed1eec30fd084b839bc78c23dac95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 1
+  sprite: {fileID: 8693940594499943698}
+  _hp: 50
 --- !u!1 &8693940595031625163
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +313,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8693940595313947247}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1

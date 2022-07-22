@@ -30,7 +30,7 @@ public class PlayerAnimation : MonoBehaviour
         _isFalling = false;
 
         if (state == _currentState) return;
-        _anim.CrossFade(state, 0.2f, 0);
+        _anim.CrossFade(state, 0, 0);
         _currentState = state;
 
     }

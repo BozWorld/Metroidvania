@@ -304,7 +304,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -352,14 +352,14 @@ MonoBehaviour:
   Speed: 6
   RawMovement: {x: 0, y: 0}
   PlayerSprite: {fileID: 7493964550839742948}
-  JumpVelocity: 6
+  JumpVelocity: 7
   FallMultiplier: 2.5
   LowJumpMultiplier: 2
   Rb: {fileID: 0}
   Ground: {fileID: 7493964549293851814}
   PlayerAnimator: {fileID: 603140558}
-  DashDistance: 20
-  DashSpeed: 0.3
+  DashDistance: 8
+  DashSpeed: 0.2
   DashinCoolDown: 1
   DashTrail: {fileID: 1991616669}
 --- !u!1 &7493964550839742938
@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 7493964550839742949}
   - component: {fileID: 7493964550839742948}
   - component: {fileID: 603140558}
+  - component: {fileID: 1862241439}
   m_Layer: 3
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -467,3 +468,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1862241439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7493964550839742938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1b41f77b3f20241ac772da0f18aeca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 7493964549293851812}
+  _anim: {fileID: 603140558}
+  _renderer: {fileID: 7493964550839742948}

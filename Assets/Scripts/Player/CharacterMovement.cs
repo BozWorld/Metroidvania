@@ -46,6 +46,7 @@ public class CharacterMovement : MonoBehaviour
         Move();
         FallModifier();
         IsGrounded();
+        flip();
     }
 
     private void Move()
@@ -119,9 +120,6 @@ public class CharacterMovement : MonoBehaviour
             _isDashing = false;
             yield return new WaitForSeconds(DashinCoolDown);
             _canDash = true;
-            // Vector2 dashPos = new Vector2(transform.position.x + DashDistance, transform.position.y);
-            // transform.position = Vector2.Lerp(transform.position,dashPos, DashSpeed);
-            //Rb.velocity = new Vector2(transform.position.x * DashDistance *, transform.position.y);
         }
     }
 
