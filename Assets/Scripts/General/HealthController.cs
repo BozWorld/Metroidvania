@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour, IDeath, IDamageable<float>
 {
-    public enum PawnType { player, enemy,boss};
-    public PawnType Type;
-    public SpriteRenderer sprite;
+    public enum PawnType { Player, enemy,boss};
+    public PawnType TypeToHit;
 
     [SerializeField] private float _hp = 50f;
         
@@ -25,7 +24,7 @@ public class HealthController : MonoBehaviour, IDeath, IDamageable<float>
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.CompareTag("Player"))
+        if(coll.CompareTag(TypeToHit.ToString()))
         {
             Damage(10);
         }
