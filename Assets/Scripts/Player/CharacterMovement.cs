@@ -6,7 +6,6 @@ using TMPro;
 public class CharacterMovement : MonoBehaviour, IStartCooldown<float>, IUpdateCooldown<float>
 {
     public bool ModePlayer;
-    public TMP_Text textMode;
     [SerializeField] private LayerMask _groundLayerMask;
     public float Speed;
     public PlayerInput Input;
@@ -112,7 +111,6 @@ public class CharacterMovement : MonoBehaviour, IStartCooldown<float>, IUpdateCo
     private void SwitchMode()
     {
         ModePlayer = !ModePlayer;
-        textMode.text = (ModePlayer) ? "Hand to Hand"  : "Distance";
     }
 #region spell
 
@@ -141,7 +139,7 @@ public class CharacterMovement : MonoBehaviour, IStartCooldown<float>, IUpdateCo
         {
             _checkDirection = -1;
         }
-        else
+        if(RawMovement.x > 0)
         {
             _checkDirection = 1;
         }
