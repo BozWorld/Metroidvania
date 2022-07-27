@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34a614f6e84ac804395e7b0fd6fa0005
+guid: e4c763830ea127b4b86843956669aa14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,133 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dash-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 17
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe024694509a7b24a9090bea121c3a55
-      internalID: -935064763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 17
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0f82987892b89d46b1dd613ce63f0cf
-      internalID: -1169908075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 17
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2273067a670a5a6489b55f564b96049c
-      internalID: -133621184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 17
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51eddc75966191f4f9da0c727ab296d6
-      internalID: -45635460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 17
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28ae5e629ddb9ac439ec96da4ea65d76
-      internalID: 847407104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 17
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55679bedba254cf4f8a0cc4e6040d64d
-      internalID: -493940961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_6
+      name: Dash-SheetbutShorter_0
       rect:
         serializedVersion: 2
         x: 0
@@ -238,20 +112,20 @@ TextureImporter:
         width: 30
         height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60f57f38198541843b83b98e66e79d3e
-      internalID: -195413114
+      spriteID: 812108fa3f487af4ebf702210493c8bc
+      internalID: -1171663747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash-Sheet_7
+      name: Dash-SheetbutShorter_1
       rect:
         serializedVersion: 2
         x: 30
@@ -259,20 +133,20 @@ TextureImporter:
         width: 30
         height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3c4be68213bae741b73cbb36232bab7
-      internalID: 1025304891
+      spriteID: 67359c3b4d51f0a4cab2dff6615702b1
+      internalID: 1259066144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash-Sheet_8
+      name: Dash-SheetbutShorter_2
       rect:
         serializedVersion: 2
         x: 60
@@ -280,20 +154,20 @@ TextureImporter:
         width: 30
         height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60ce752834f2867458fd99067ba1da05
-      internalID: -37206773
+      spriteID: f1b84e671f6e7a141bbd6860f50601e5
+      internalID: -459541872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash-Sheet_9
+      name: Dash-SheetbutShorter_3
       rect:
         serializedVersion: 2
         x: 90
@@ -301,20 +175,20 @@ TextureImporter:
         width: 30
         height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22a296965cc612044800f5072d99c7fc
-      internalID: 1924165465
+      spriteID: a4a518a92bd47db428410087ec0ae3bb
+      internalID: 201747268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash-Sheet_10
+      name: Dash-SheetbutShorter_4
       rect:
         serializedVersion: 2
         x: 120
@@ -322,35 +196,14 @@ TextureImporter:
         width: 30
         height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9468c586daaa6b447b937df5906fff39
-      internalID: -1293390262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dash-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 0
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bcd5a3faa2eb884c98ea8e636af3f8c
-      internalID: -1675446181
+      spriteID: dbbb47ab574870c43af9cac246aebc4e
+      internalID: 218512311
       vertices: []
       indices: 
       edges: []
@@ -366,18 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dash-Sheet_0: -935064763
-      Dash-Sheet_9: 1924165465
-      Dash-Sheet_5: -493940961
-      Dash-Sheet_8: -37206773
-      Dash-Sheet_1: -1169908075
-      Dash-Sheet_7: 1025304891
-      Dash-Sheet_4: 847407104
-      Dash-Sheet_11: -1675446181
-      Dash-Sheet_6: -195413114
-      Dash-Sheet_3: -45635460
-      Dash-Sheet_10: -1293390262
-      Dash-Sheet_2: -133621184
+      Dash-SheetbutShorter_4: 218512311
+      Dash-SheetbutShorter_0: -1171663747
+      Dash-SheetbutShorter_2: -459541872
+      Dash-SheetbutShorter_3: 201747268
+      Dash-SheetbutShorter_1: 1259066144
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 638a7fd1c259dff4692d4e86c35abdfe
+guid: 6aa29fc6282a26e418d8e7d8c1dcb118
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,11 +104,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump-Sheet_0
+      name: Jump-SheetbutShorter_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 25
+        y: 0
         width: 22
         height: 25
       alignment: 0
@@ -118,18 +118,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46fae264b5e78274fb52d6fed595fba1
-      internalID: -1022662319
+      spriteID: 3bca036b3b1f65442b21d40f5240028c
+      internalID: -1428350197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump-Sheet_1
+      name: Jump-SheetbutShorter_1
       rect:
         serializedVersion: 2
         x: 22
-        y: 25
+        y: 0
         width: 22
         height: 25
       alignment: 0
@@ -139,18 +139,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe45ce514c92ac547b41d233442a0859
-      internalID: -1275288872
+      spriteID: 10dbf23ce6a6d9f47a3fd6cfdc86fd3a
+      internalID: -1451845651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump-Sheet_2
+      name: Jump-SheetbutShorter_2
       rect:
         serializedVersion: 2
         x: 44
-        y: 25
+        y: 0
         width: 22
         height: 25
       alignment: 0
@@ -160,38 +160,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf4a4cf558f856488fdf56347f90d14
-      internalID: -578846661
+      spriteID: 526093e05507eb74599a7bc3292ce523
+      internalID: 764499823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump-Sheet_3
+      name: Jump-SheetbutShorter_3
       rect:
         serializedVersion: 2
         x: 66
-        y: 25
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a209cd8fb65ac8440851fb05956a7862
-      internalID: 1124056808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 0
         width: 22
         height: 25
@@ -202,50 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7dc9a93dc8ac2b478d5d8d802864a9b
-      internalID: 52661828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 0
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfe12e2b895bbca478e03a1af3a9c6ca
-      internalID: -705980072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 0
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0ee0e81962b5d142b8216d1a2e07368
-      internalID: -358021427
+      spriteID: 4b07ab3f669b1324398eed82345d0475
+      internalID: 1012915958
       vertices: []
       indices: 
       edges: []
@@ -261,13 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump-Sheet_3: 1124056808
-      Jump-Sheet_5: -705980072
-      Jump-Sheet_1: -1275288872
-      Jump-Sheet_2: -578846661
-      Jump-Sheet_4: 52661828
-      Jump-Sheet_6: -358021427
-      Jump-Sheet_0: -1022662319
+      Jump-SheetbutShorter_3: 1012915958
+      Jump-SheetbutShorter_0: -1428350197
+      Jump-SheetbutShorter_1: -1451845651
+      Jump-SheetbutShorter_2: 764499823
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
